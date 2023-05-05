@@ -1,0 +1,18 @@
+{
+  "name": "fluture-help",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pap.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fluture": "^14.0.0",
+    "fluture-sanctuary-types": "^7.1.0",
+    "sanctuary": "^3.1.0"
+  }
+}
