@@ -9,7 +9,7 @@ import {
     resolve,
 } from "fluture";
 
-const S = sanctuary.create ({checkTypes: true, env: sanctuary.env.concat (flutureEnv)});
+const S = sanctuary.create ({checkTypes: false, env: sanctuary.env.concat (flutureEnv)});
 
 const logWithTime = startTime => x => console.log (Date.now () - startTime, x);
 
@@ -57,16 +57,12 @@ fork (console.error)
 
 
 
-const runPap4 = S.lift2 (getThingC)
-                        (Par (getThingA))
-                        (Par (getThingB))
-
 fork (console.error)
      (logWithTime (Date.now ()))
-     (seq (runPap4).pipe (S.join));
+     (seq (runPap2).pipe (S.join));
 
 
 
 fork (console.error)
      (logWithTime (Date.now ()))
-     (joinWith (seq) (runPap4));
+     (joinWith (seq) (runPap2));
