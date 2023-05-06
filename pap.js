@@ -47,8 +47,8 @@ fork (console.error)
 
 
 
-const joinWith = S.compose (S.join)
-const runProgram2 = S.compose (joinWith (seq))
+const joinAfter = S.compose (S.join)
+const runProgram2 = S.compose (joinAfter (seq))
                               (runPap3);
 
 fork (console.error)
@@ -65,4 +65,4 @@ fork (console.error)
 
 fork (console.error)
      (logWithTime (Date.now ()))
-     (joinWith (seq) (runPap2));
+     (joinAfter (seq) (runPap2));
