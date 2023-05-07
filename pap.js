@@ -65,6 +65,8 @@ F.fork (console.error)
 //    runPap :: ConcurrentFuture a (Future a b)
 
 //    flatten :: Applicative ConcurrentFuture, Monad Future => ConcurrentFuture a (Future a b) -> Future a b
+//    flatten :: ConcurrentFuture a (Future a b) -> Future a b
+//    flatten :: Applicative a, Chain c => a b -> c b
 const flatten = S.compose (S.join)
                           (F.seq);
 F.fork (console.error)
